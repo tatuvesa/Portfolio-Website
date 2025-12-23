@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+</head>
+
+<body class="bg-black text-white">
+    <!-- INTRO/SPLASH SCREEN -->
+    <div id="intro-screen"
+        class="fixed inset-0 bg-gradient-to-br from-slate-950 via-black to-slate-900 flex items-center justify-center z-50 transition-opacity duration-1000 overflow-hidden">
+        <!-- Animated background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full mix-blend-screen filter blur-3xl animate-float">
+            </div>
+            <div class="absolute bottom-20 right-10 w-72 h-72 bg-purple-500/10 rounded-full mix-blend-screen filter blur-3xl animate-float"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="text-center text-white px-6 relative z-10">
+            <!-- Glass card effect -->
+            <div class="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-12 mb-8 animate-fade-in">
+                <!-- Logo/Initial Section -->
+                <div class="mb-8">
+                    <h1
+                        class="text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+                        Portfolio</h1>
+                    <div class="h-1 w-32 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
+                </div>
+
+                <!-- Name -->
+                <h2 class="text-5xl font-semibold mb-4 animate-fade-in-delay-1">Rurfik</h2>
+                <p class="text-xl text-blue-300/80 mb-8 animate-fade-in-delay-2">Full Stack Developer | Designer |
+                    Creator</p>
+            </div>
+
+            <!-- Credits/Info with glassmorphism -->
+            <div
+                class="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 mt-8 animate-fade-in-delay-1">
+                <p class="mb-2 text-blue-300/70">Built with modern web technologies</p>
+                <p class="text-slate-400">© 2025 Rurfik. All rights reserved.</p>
+            </div>
+
+            <!-- Loading indicator -->
+            <div class="mt-12 animate-fade-in-delay-2">
+                <p
+                    class="text-blue-300/60 text-sm animate-glow-pulse inline-block px-4 py-2 backdrop-blur-sm bg-blue-500/10 border border-blue-400/20 rounded-full">
+                    Loading portfolio...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN PORTFOLIO CONTENT -->
+    <div id="main-content" class="opacity-0 transition-opacity duration-1000">
+        <!-- Navigation Bar with glassmorphism -->
+        <nav class="sticky top-0 z-40 backdrop-blur-md bg-black/30 border-b border-white/10">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                <h1
+                    class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Portfolio</h1>
+                <ul class="flex gap-8 text-gray-400">
+                    <li><a href="#about" class="hover:text-blue-400 transition duration-300">About</a></li>
+                    <li><a href="#projects" class="hover:text-blue-400 transition duration-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400 transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="about" class="bg-gradient-to-b from-slate-950 to-black py-20">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-5xl font-bold text-white mb-6">Hi, I'm Rurfik</h2>
+                <p class="text-xl text-gray-400 mb-8 leading-relaxed">
+                    Welcome to my portfolio! I'm a passionate developer and creator who loves building amazing digital
+                    experiences.
+                    This is where I showcase my best work, skills, and projects.
+                </p>
+                <button id="open-modal"
+                    class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-lg transition duration-300 backdrop-blur-sm hover:shadow-lg hover:shadow-blue-500/50">
+                    Get In Touch
+                </button>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-black py-20">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-4xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+
+                <!-- Project Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div
+                        class="group backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-blue-400/50 hover:bg-white/10 transition duration-300">
+                        <img src="https://cdn.discordapp.com/attachments/1452798030104236092/1452799170644541593/pawn-3d.webp?ex=694b2029&is=6949cea9&hm=0bc5e9469619583b9685ebdf8fc97f3ef63caa80a42c5ceac0ec9b52a9bf0da4&"
+                            alt="Chess Bot"
+                            class="w-28 h-28 object-cover group-hover:scale-105 transition duration-300 mx-auto my-8">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Chesstinator - The Tournament-Winning C++
+                                Chessbot</h3>
+                            <p class="text-gray-400 mb-4">Chesstinator is a chess engine developed in C++. It's designed
+                                for strong chess play and has achieved success by winning a recent class tournament. We
+                                are sharing the source code for this project.</p>
+                            <a href="https://github.com/laurihuju/Chess-AI"
+                                class="text-blue-400 hover:text-blue-300 font-semibold transition duration-300">View
+                                Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div
+                        class="group backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-purple-400/50 hover:bg-white/10 transition duration-300">
+                        <div
+                            class="bg-gradient-to-br from-purple-600 to-purple-800 h-48 group-hover:from-purple-500 group-hover:to-purple-700 transition duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Project Title 2</h3>
+                            <p class="text-gray-400 mb-4">A brief description of what this project does and the
+                                technologies used.</p>
+                            <a href="#"
+                                class="text-blue-400 hover:text-blue-300 font-semibold transition duration-300">View
+                                Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div
+                        class="group backdrop-blur-sm bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400/50 hover:bg-white/10 transition duration-300">
+                        <div
+                            class="bg-gradient-to-br from-cyan-600 to-blue-800 h-48 group-hover:from-cyan-500 group-hover:to-blue-700 transition duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Project Title 3</h3>
+                            <p class="text-gray-400 mb-4">A brief description of what this project does and the
+                                technologies used.</p>
+                            <a href="#"
+                                class="text-blue-400 hover:text-blue-300 font-semibold transition duration-300">View
+                                Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gradient-to-b from-black to-slate-950 py-20">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Let's Work Together</h2>
+                <p class="text-lg text-gray-400 mb-8">Have a project in mind? I'd love to hear about it!</p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <button id="open-modal-contact"
+                        class="backdrop-blur-sm bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-lg transition duration-300 hover:shadow-lg hover:shadow-blue-500/50">
+                        Email Me
+                    </button>
+                    <button
+                        class="backdrop-blur-sm bg-white/5 border border-white/20 hover:border-blue-400 text-white font-bold py-3 px-8 rounded-lg transition duration-300 hover:bg-white/10">
+                        LinkedIn
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black border-t border-white/10 text-gray-500 py-8">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-4">
+                    <p>© 2025 Rurfik. Built with Tailwind CSS.</p>
+                </div>
+                <!-- Little creations bar -->
+                <div class="border-t border-white/10 pt-4 text-center">
+                    <p class="text-xs text-gray-600">Other little creations: <a href="https://29380482390.github.io/"
+                            target="_blank" class="text-gray-500 hover:text-blue-400 transition underline">Browser
+                            Startpage</a>
+                        <a href="https://github.com/tatuvesa/Windows-Update-Script" target="_blank"
+                            class="text-gray-500 hover:text-blue-400 transition underline">Windows Updater</a>
+                    </p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- CONTACT MODAL -->
+    <div id="contact-modal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center z-50 transition-opacity duration-300">
+        <!-- Modal content with glassmorphism -->
+        <div id="modal-content"
+            class="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 max-w-md w-full mx-4 transform transition-all duration-300 scale-95 opacity-0">
+            <!-- Close button -->
+            <div class="flex justify-between items-center mb-6">
+                <h2
+                    class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Get In Touch</h2>
+                <button id="close-modal" class="text-gray-400 hover:text-white transition text-2xl">&times;</button>
+            </div>
+
+            <!-- Contact info -->
+            <div class="space-y-4 mb-6">
+                <div class="flex items-start gap-4">
+                    <div class="text-blue-400 text-xl mt-1">📧</div>
+                    <div>
+                        <p class="text-gray-300 text-sm">Email</p>
+                        <a href="mailto:Rurfik@proton.me"
+                            class="text-white hover:text-blue-400 transition font-semibold">Rurfik@proton.me</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="text-cyan-400 text-xl mt-1">💬</div>
+                    <div>
+                        <p class="text-gray-300 text-sm">GitHub</p>
+                        <a href="https://Github.com/tatuvesa"
+                            class="text-white hover:text-blue-400 transition font-semibold">github.com/tatuvesa</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6"></div>
+
+            <!-- Quick message -->
+            <p class="text-gray-400 text-sm text-center">Feel free to reach out for collaborations or project inquiries!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // After 10 seconds, fade out intro and fade in main content
+        setTimeout(() => {
+            const introScreen = document.getElementById('intro-screen');
+            const mainContent = document.getElementById('main-content');
+
+            // Fade out intro
+            introScreen.style.opacity = '0';
+            introScreen.style.pointerEvents = 'none';
+
+            // Fade in main content
+            mainContent.style.opacity = '1';
+        }, 10000); // 10000 milliseconds = 10 seconds
+
+        // MODAL FUNCTIONALITY
+        const modal = document.getElementById('contact-modal');
+        const modalContent = document.getElementById('modal-content');
+        const openModalBtns = document.querySelectorAll('#open-modal, #open-modal-contact');
+        const closeModalBtn = document.getElementById('close-modal');
+
+        // Open modal
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                // Trigger animation
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            });
+        });
+
+        // Close modal
+        const closeModal = () => {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close when clicking outside the modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>
